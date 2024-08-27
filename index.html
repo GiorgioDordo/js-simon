@@ -8,29 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form class="text-center">
-            <div class="d-flex raw justify-content-between">
-                <div class="col-2">
-                    <input type="number">
+    <div class="cont-game container d-flex justify-content-center align-items-center">
+        <div id="choose-nb" class="text-center d-none">    
+
+            <h1>
+                    CHOOSE THE CORRECT NUMBERS
+            </h1>
+
+            <form class="text-center mt-4 d-flex row justify-content-center">
+
+                <div class="d-flex row justify-content-between">
+                    <div class="col-2">
+                        <input class="rounded-pill" type="number" min="1" max="100">
+                    </div>
+                    <div class="col-2">
+                        <input class="rounded-pill" type="number" min="1" max="100">
+                    </div>
+                    <div class="col-2">
+                        <input class="rounded-pill" type="number" min="1" max="100">
+                    </div>
+                    <div class="col-2">
+                        <input class="rounded-pill" type="number" min="1" max="100">
+                    </div>
+                    <div class="col-2">
+                        <input class="rounded-pill" type="number" min="1" max="100">
+                    </div>
                 </div>
-                <div class="col-2">
-                    <input type="number">
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary me-4">Confirm</button>
+                    <button type="button" class="btn btn-danger">Play Again</button>
                 </div>
-                <div class="col-2">
-                    <input type="number">
-                </div>
-                <div class="col-2">
-                    <input type="number">
-                </div>
-                <div class="col-2">
-                    <input type="number">
-                </div>
-            </div>
-            <div>
-                <button class="m-t-1">Confirm</button>
-            </div>
-        </form>
+            </form>
+    
+        </div>
+
+        <div id="time-display" class="d-flex cont-timer row justify-content-between text-center">
+            <div id="timer" class="h1"></div>
+        </div>
+
+        <div id="numbers-display" class="d-flex random-numbers row justify-content-between text-center">
+            <P class="r-n col-2">10</P>
+            <P class="r-n col-2">20</P>
+            <P class="r-n col-2">30</P>
+            <P class="r-n col-2">40</P>
+            <P class="r-n col-2">50</P>
+        </div>
     </div>
     <script src="script.js"></script>
     <script src="function.js"></script>
