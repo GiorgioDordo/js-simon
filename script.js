@@ -17,6 +17,30 @@ const countdown = setInterval(() => {
     }
 }, 1000);
 
-// setTimeout(() => {
-//     clearInterval(countdown);
-// }, 30000)
+
+// TODO get input values from the dom
+function getNewRandomNumbers (min, max) {
+    let randomNumber;
+    randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randomNumber;
+}
+
+let newNumber = [0];
+
+// create random numbers and print in the dom
+for (i = 1; i < 6; i++) {
+    newNumber = getNewRandomNumbers(1, 100);
+    console.log(newNumber);
+    const para = document.createElement('p');
+    const node = document.createTextNode(newNumber);
+    para.appendChild(node);
+    numbersRandom.appendChild(para);
+    para.classList.add('r-n', 'col-2', 'h1');
+}
+
+// get users numbers
+
+
+
+
+
