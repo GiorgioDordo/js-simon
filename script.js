@@ -2,8 +2,8 @@ const timerDisplay = document.getElementById('timer');
 const gameDisplay = document.getElementById('choose-nb');
 const numbersRandom = document.getElementById('numbers-display');
 
-let seconds = 30;
-timerDisplay.innerText = 30;
+let seconds = 5;
+timerDisplay.innerText = 5;
 
 const countdown = setInterval(() => {
     --seconds;
@@ -18,7 +18,7 @@ const countdown = setInterval(() => {
 }, 1000);
 
 
-// TODO get input values from the dom
+//  function random number
 function getNewRandomNumbers (min, max) {
     let randomNumber;
     randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -38,9 +38,21 @@ for (i = 1; i < 6; i++) {
     para.classList.add('r-n', 'col-2', 'h1');
 }
 
-// get users numbers
+// get users inputs
 
+const play = document.getElementById('play');
+const reset = document.getElementById('reset');
 
+const inputs = document.querySelector('input');
 
+function getUserNumbers() {
+    for (let i = 0; i < inputs.length; i++) {
+        let value = parseInt(inputs[i].value); 
+        userNumbers.push(value);
+    }
 
+    console.log('userNumbers: ', userNumbers); 
+}
 
+play.addEventListener('submit o click non mi ricordo', getUserNumbers);
+let value = parseInt(inputs[i].value);
